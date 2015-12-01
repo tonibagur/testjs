@@ -1,8 +1,6 @@
 'use strict';
 
-var app=angular.module('app', []);
-
-app.controller('CpController', function CpController($scope) {
+var app=angular.module('app', []).controller('CpController', function CpController($scope) {
 
 	var cpProva=['08024','08025','08026','08027','08028'];
 

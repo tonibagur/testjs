@@ -40,12 +40,29 @@ describe('testing CpController', function(){
   	}); 
 
 	//test que comprova els valors de les variables quan el cp existeix
-	/*it('should have right cp', function() {
+	it('should have right cp', function() {
 		expect(scope.validarCp('08024')).toBeTruthy();
 		expect(scope.error_cp).toBe('');
 		expect(scope.ciutat).toBeDefined();
 		expect(scope.provincia).toBeDefined();
-  	});*/
+  	});
+
+});
+
+describe('testing sinon', function(){
+	
+	var opts = { call: function (msg) { console.log(msg); } },
+	    mock = sinon.mock(opts);
+
+	// You state your success criteria upfront
+	mock.expects("call").once().withExactArgs("Hello World");
+	/* ... twice, atMost, never, exactly, on, etc ... */
+	
+	opts.call("Hello World"); 
+	
+	mock.verify();
+	
+	mock.restore();
 
 });
 

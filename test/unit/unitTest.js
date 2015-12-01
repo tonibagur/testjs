@@ -49,3 +49,22 @@ describe('testing CpController', function(){
 
 });
 
+describe('testing sinon', function(){
+	
+	it('prova', function(){
+	var opts = { call: function (msg) { console.log(msg); } },
+	    mock = sinon.mock(opts);
+
+	// You state your success criteria upfront
+	mock.expects("call").once().withExactArgs("Hello World");
+	/* ... twice, atMost, never, exactly, on, etc ... */
+	
+	opts.call("Hello World"); 
+	
+	mock.verify();
+	
+	mock.restore();
+});
+
+});
+
