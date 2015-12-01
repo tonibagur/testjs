@@ -1,14 +1,17 @@
 'use strict';
 
-var app=angular.module('app', [])
-.controller('CpController', function CpController($scope) {
+var app=angular.module('app', []);
+
+app.controller('CpController', function CpController($scope) {
 
 	var cpProva=['08024','08025','08026','08027','08028'];
 
 	var evaluar=function(condicio, error){
-	
-		return condicio? $scope.error_cp = error&&true:false;	
-
+		if(condicio){
+			$scope.error_cp = error;
+			return false;	
+		}
+		return true;
 	}
 
 	var validarMida= function(cp){
@@ -33,4 +36,4 @@ var app=angular.module('app', [])
 		return false;
 	};
 
-})
+});
