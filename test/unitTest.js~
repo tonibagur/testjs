@@ -1,0 +1,24 @@
+'use strict';
+ 
+describe('CpController', function(){
+
+  beforeEach(module('app'));
+
+
+	it('should have a wrong cp', inject(function($controller) {
+    		var scope = {},
+        		ctrl = $controller('CpController', {$scope:scope});
+		$scope.cp='08091';
+    		expect(scope.error_cp).toBe('No existeix');
+  	}));
+
+	/*it('should have right cp', function() {
+		var $scope = {}, ctrl = new CpController(scope);
+		$scope.cp='08024';
+    		expect(scope.error_cp).toBe('');
+		expect(scope.ciutat).toBe('Barcelona');
+		expect(scope.provincia).toBe('Barcelona');
+  	});*/
+
+});
+
