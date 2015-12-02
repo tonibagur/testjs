@@ -47,24 +47,33 @@ describe('testing CpController', function(){
 		expect(scope.provincia).toBeDefined();
   	});
 
-});
+	it('testing spies', function(){
+		var spy=sinon.spy(scope.validarCp(''));
+		spy();
+		expect(spy).toHaveBeenCalled();
+	});
 
-describe('testing sinon', function(){
-	
-	it('prova', function(){
-		var opts = { call: function (msg) { console.log(msg); } },
-	   	mock = sinon.mock(opts);
+	it('testing stubs', function(){
+		var stub = sinon.stub(scope, "validarCp");
+		stub.withArgs('545').returns('patata');
+		stub.returns('atata');
+		//var funcio= scope.validarCp('545');
+		expect(stub('565')).toEqual('atata');
+	});
 
-		// You state your success criteria upfront
-		mock.expects("call").once().withExactArgs("Hello World");
-		/* ... twice, atMost, never, exactly, on, etc ... */
-	
-		opts.call("Hello World"); 
-	
+	it('testing mocks', function(){
+		var mock=sinon.mock(ctrl);
+		mock.expects('ctrl.validarMida').once();
+
+		scope.validarCp('');
 		mock.verify();
-	
-		mock.restore();
 	});
 
 });
+
+/*describe('testing sinon', function(){
+	
+
+
+});*/
 
