@@ -10,5 +10,9 @@
     "angular-mocks": "1.4.x",
     "jquery": "~2.1.1",
     "bootstrap": "~3.1.1"
+  },
+  "devDependencies": {
+    "sinonjs": "~1.17.1",
+    "jasmine-sinon": "~0.4.0"
   }
 }
