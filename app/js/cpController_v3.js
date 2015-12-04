@@ -4,15 +4,15 @@ var app=angular.module('app', []).controller('CpController', function CpControll
 
 	var cpProva=['08024','08025','08026','08027','08028'];
 
-	var evaluar=function(condicio, error){
+	function evaluar(condicio, error){
 		if(condicio){
 			$scope.error_cp = error;
 			return false;	
 		}
 		return true;
-	}
+	};
 
-	function validarMida(cp){
+	$scope.validarMida= function(cp){
 		return evaluar((cp.length!=5),'CP son 5 digits');
 	};
 	
@@ -24,9 +24,9 @@ var app=angular.module('app', []).controller('CpController', function CpControll
 		return evaluar((cpProva.indexOf(cp)==-1),'No existeix');
 	};
 
+
 	$scope.validarCp= function(cp){
-		validarMida(cp);	
-		if(validarMida(cp)&&validarDigits(cp)&&existeix(cp)){
+		if($scope.validarMida(cp)&&validarDigits(cp)&&existeix(cp)){
 			$scope.error_cp = '';
 			$scope.ciutat='Barcelona';
 			$scope.provincia='Barcelona';
