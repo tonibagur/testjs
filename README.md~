@@ -16,7 +16,7 @@ Run tests with [Jasmine Spec Runner](https://github.com/jasmine/jasmine):
 2. Place your js (the ones that you want to test) in app/js/ and your tests in test/unit/ instead of example files.
 3. Open SpecRunner.html file in browser.
 
-* Using Karma it's possible to test more than one browser at the same time. Default options are Chrome and Firefox. To custumize which browsers you would like to launch edit browsers array of karma.conf.js. 
+* Using Karma it's possible to test more than one browser at the same time. To custumize which browsers you would like to launch edit browsers array of karma.conf.js. 
 * Change 'files' array in karma.conf.js or add/remove script lines on SpecRunner.html file to run specific tests without moving them from test/unit/ directory. The same as well for source js files.
 
 ## Debugging karma
