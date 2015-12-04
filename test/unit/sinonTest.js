@@ -53,7 +53,7 @@ describe('CpController', () => {
 	//exemple mock
 	it('testing mocks', function(){
 		var mock=sinon.mock(scope.validarCp);
-
+		//faltaria posar mock.expects(...)... aquí
 		scope.validarCp('');
 		mock.verify();
 

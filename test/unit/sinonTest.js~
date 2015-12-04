@@ -34,7 +34,7 @@ describe('CpController', () => {
 		expect(scope.validarMida).toHaveBeenCalled();
 		expect(scope.validarMida).toHaveBeenCalledWith('');
 		
-		expect(spy).toHaveBeenCalledTwice();
+		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith('');
 	});
 

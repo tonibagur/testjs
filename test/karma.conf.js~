@@ -9,17 +9,17 @@ module.exports = function(config){
       'bower_components/sinonjs/sinon.js',
       //'bower_components/jasmine-sinon/lib/jasmine-sinon.js',
       'app/js/**/*.js',
-      'test/unit/**/*.js',
-      //'test/unit/unitTest.js'
+      //'test/unit/**/*.js',
+      'test/unit/sinonTest.js'
     ],
 
-    reporters: ['progress'],
+    reporters: ['progress','coverage'],
 
     preprocessors: {
       // source files, that you wanna generate coverage for
       // do not include tests or libraries
       // (these files will be instrumented by Istanbul)
-      'app/js/**/*.js': []
+      'app/js/**/*.js': ['coverage']
     },
 
     // optionally, configure the reporter
