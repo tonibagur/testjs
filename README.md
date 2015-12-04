@@ -10,11 +10,11 @@ Run tests with [Karma](https://github.com/karma-runner/karma):
 
 1. Download bower.json, package.json, karma.conf.js, app/js/ and test/.
 2. Place your js (the ones that you want to test) in app/js/ and your tests in test/unit/ instead of example files.
-3. On terminal, move to your directory and execute `npm test`
+3. On a terminal, move to your directory and execute `npm test`
 
 Comments:
 
-* Using Karma it's possible to test more than one browser at the same time. Default options are Chrome and Firefox. To custumize which browsers you would like to launch edit browsers array of karma.conf.js. 
+* Using Karma, it's possible to test more than one browser at the same time. Default options are Chrome and Firefox. To customize which browsers you would like to launch edit browsers array of karma.conf.js. 
 * Change 'files' array in karma.conf.js to run specific tests without moving them from test/unit/ directory. The same as well for source js files.
 
 Run tests with [Jasmine Spec Runner](https://github.com/jasmine/jasmine):
